@@ -1,0 +1,321 @@
+body {
+    background: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+/********** Navbar **********/
+nav {
+    background: #000;
+    height: 3.5vw;
+}
+
+nav > div.bh-logo > svg {
+    width: auto;
+    height: 1.5vw;
+}
+
+/********** Navbar - Hide elements **********/
+nav > div.pull-right > button.not-show,
+nav > div.pull-right > span.not-show {
+    display: none !important;
+}
+/********** Meet access (origin path) **********/
+#room-create > .row > .access-title {
+    margin-top: 5vw !important;
+}
+
+#room-create {
+    display: none !important;
+}
+
+/********** Meet access (room path) **********/
+#username-set > .row > .join-title {
+    margin-top: 5vw !important;
+}
+
+.card-remote {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: calc(100vh - 3.5vw);
+    overflow: hidden;
+    border: none !important;
+    z-index: 0;
+}
+
+/********** Chat **********/
+.chat-col{
+    right: -100vw;
+    bottom: 0;
+    top: 3.5vw;
+    z-index: 1000;
+    position: fixed;
+    background: rgba(0, 0, 0, .9);
+    color: #fff;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 40px;
+    padding-top: 15px;
+    min-height: 100vh;
+    transition: all 0.3s ease !important;
+    -webkit-transition: all 0.3s ease !important;
+    -moz-transition: all 0.3s ease !important;
+}
+
+.chat-col.chat-opened {
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease !important;
+    -webkit-transition: all 0.3s ease !important;
+    -moz-transition: all 0.3s ease !important;
+}
+
+/********** Input chat **********/
+form > div.input-group {
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+form > div.input-group > div.input-group-append > button {
+    border: none;
+    background: #01BFCE;
+}
+
+#chat-messages{
+    height: 70vh;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;
+}
+
+.chat-box{
+    bottom: 0px;
+    right: 0;
+    position: absolute;
+    border: 0;
+    border-top: 1px groove white;
+    border-left: 1px groove white;
+    font-size: small;
+}
+
+.chat-box::placeholder{
+    font-size: small;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.chat-box,
+.chat-box:focus{
+    resize: none !important;
+    box-shadow: none !important;
+}
+
+.chat-row{
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.main{
+    margin-top: 3.5vw;
+    padding: 0;
+    width: 100%;
+    height: calc(100vh - 3.5vw);
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+    -webkit-transition: all 0.3s ease !important;
+    -moz-transition: all 0.3s ease !important;
+}
+
+.remote-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: rgba(0, 0, 0, .8);
+}
+
+.remote-video-controls{
+    position:absolute;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index:300000;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
+
+.remote-video:hover + .remote-video-controls,
+.remote-video-controls:hover{
+    visibility: visible;
+}
+
+.local-video{
+    position: fixed;
+    top: 4.5vw;
+    left: 1vw;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 10vw;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    z-index: 9999;
+}
+
+.mirror-mode{
+    -ms-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.sender-info{
+    font-size: smaller;
+    margin-top: 5px;
+    align-self: flex-end;
+}
+
+.msg{
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    background: rgba(255, 255, 255, .4);
+}
+
+.bg-white {
+    color: black;
+}
+
+.bg-white a {
+    color: black;
+    text-decoration: underline;
+}
+
+.chat-card{
+    border-radius: 10px;
+    height: auto;
+}
+
+.chat-card a {
+    color: white;
+    text-decoration: underline;
+}
+
+.btn-no-effect:focus{
+    box-shadow: none;
+}
+
+.very-small{
+    font-size: 6px !important;
+}
+
+#close-single-peer-btn {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    border-radius: 0%;
+    z-index: 100;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.record-option{
+    height: 200px;
+    border-radius: 10%;
+    border: 1px solid #17a2b8;
+    cursor: pointer;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.custom-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #17a2b8;
+    width: 80%;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-displa,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-volume-slider {
+    display: none !important;
+}
+
+@media only screen and (max-width:767px){
+    .chat-col{
+        right: -100vw;
+        width: 100vw;
+        z-index: 99999;
+        transition: 0.3s;
+        top: 47px;
+    }
+  
+    .chat-opened::-webkit-scrollbar {
+        display: none;
+    }
+
+    #chat-messages{
+        height: 60vh;
+    }
+
+    .chat-box{
+        bottom: 90px;
+        margin-bottom: 0px;
+    }
+    
+    .card-sm{
+        max-width: 100%;
+        min-width: 50%;
+    }
+
+
+    .local-video{
+        width:40vw;
+    }
+}
+
+@media (min-width:768px){
+    .card{
+        width: 50%;
+        z-index: 1000;
+    }
+}
